@@ -21,7 +21,7 @@ df_lojas_full = (
 )
 
 st.title("Dashboard de Vendas")
-st.subheader("Faturamento por Loja (Gráfico de Barras)")
+st.subheader("Faturamento por Loja")
 grafico_barras = px.bar(
     df_lojas_full,
     x='Loja',
@@ -71,7 +71,7 @@ loja_escolhida = st.selectbox(
 # Lista de produtos disponíveis dentro da loja selecionada
 produtos_na_loja = sorted(dados[dados['Loja'] == loja_escolhida]['Produto'].unique())
 produto_escolhido = st.selectbox(
-    'Escolha um produto (na loja selecionada):',
+    'Escolha um produto:',
     produtos_na_loja
 )
 
