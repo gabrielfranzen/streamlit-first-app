@@ -9,7 +9,7 @@ dados = pd.read_excel('Vendas_Base_de_Dados.xlsx')
 # Calcula o faturamento em cada linha
 dados['Faturamento'] = dados['Quantidade'] * dados['Valor Unitário']
 
-# Gera dataframe de faturamento por loja (coloque no início)
+# Gera dataframe de faturamento por loja
 df_lojas_full = (
     dados.groupby('Loja')['Faturamento']
     .sum()
